@@ -1,0 +1,48 @@
+@import "compass/css3"
+@import "compass/typography/text/ellipsis"
+
+.nav-sidebar
+  width: 100%
+  padding: 8px 0
+  border-right: 1px solid #ddd
+
+  .katawa-icon
+    margin: 0 auto
+    $size: 140px
+    overflow: hidden
+    width: $size
+    height: 0
+    padding-top: $size
+    background: image-url('katawa.png') no-repeat
+    background-size: $size $size
+    margin-bottom: 12px
+
+  a
+    color: #333
+    @include transition(all 0.08s linear)
+    @include border-radius(4px 0 0 4px)
+
+  .active a
+    cursor: default
+    background-color: #428bca
+    color: #fff
+    text-shadow: 1px 1px 1px #666
+    &:hover
+      background-color: #428bca
+
+
+  .text-overflow
+    a, .media-body
+      white-space: nowrap
+      overflow: hidden
+
+      @include ellipsis(no-wrap)
+
+  &.pull-right
+    border-right: 0
+    border-left: 1px solid #ddd
+    a
+      @include border-radius(0 4px 4px 0)
+
+
+

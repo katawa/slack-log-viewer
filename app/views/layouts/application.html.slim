@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title
+      | SlackLogViewer
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body.slacklog
+    = render partial: '/layouts/navbar'
+
+    div.container-fluid
+      div.row
+        div.col-sm-3.col-md-2.sidebar
+          = render partial: '/layouts/sidebar'
+        div.col-sm-9.col-md-10.main
+          = yield

@@ -1,0 +1,11 @@
+/.bundle
+/vendor/bundle
+
+/log/*
+!/log/.keep
+/tmp
+/.envrc
+/public/assets
+
+/.idea/*
+!/.idea/codeStyleSettings.xml

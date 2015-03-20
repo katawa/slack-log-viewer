@@ -1,0 +1,19 @@
+nav.nav-sidebar
+  =link_to root_path do
+    .katawa-icon
+  ul.nav
+    - if search?
+      li.active
+        a.sidebar
+          strong Search
+    - else
+      li
+        a.sidebar
+          strong Search
+    - for room in rooms
+      - if current_room?("##{room}")
+        li.active
+          a.sidebar href="/rooms/#{room}" ##{room}
+      - else
+        li
+          a.sidebar href="/rooms/#{room}" ##{room}

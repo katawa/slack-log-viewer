@@ -1,0 +1,14 @@
+default: &default
+  sessions:
+    default:
+      hosts:
+        - <%= ENV['MONGO_HOST'] %>
+      database: <%= ENV['MONGO_DB'] %>
+      username: <%= ENV['MONGO_USER'] %>
+      password: <%= ENV['MONGO_PASS'] %>
+
+development:
+  <<: *default
+
+production:
+  <<: *default
