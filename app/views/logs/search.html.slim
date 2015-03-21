@@ -1,5 +1,10 @@
-div class="page-header"
-  h1 = @room
+.page-header.search
+  h1.clearfix
+    .name
+      = "'#{params[:q]}' の検索結果"
+    .count
+      = "#{@logs.size} 件"
+
 - @logs.group_by_room.each do |room, logs|
   h2 = "##{room}"
   table.room class="table table-striped"
