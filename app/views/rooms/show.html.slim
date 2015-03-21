@@ -1,18 +1,18 @@
 div class="page-header"
   h1 = @room
 - @logs.group_by_date.each do |day, logs|
-  h2= day
-  table class="table table-striped"
+  h2 = day
+  table.room class="table table-striped"
     thead
       tr
-        th= Log.human_attribute_name(:datetime)
-        th= Log.human_attribute_name(:user)
-        th= Log.human_attribute_name(:text)
+        th.datetime = Log.human_attribute_name(:datetime)
+        th.user = Log.human_attribute_name(:user)
+        th.text = Log.human_attribute_name(:text)
     tbody
       - logs.each do |log|
         tr
-          td.text-nowrap= log.datetime.strftime("%I:%M %p")
-          td= "@#{log.user[:name]}"
-          td= auto_link(log.text)
+          td.text-nowrap = log.datetime.strftime("%I:%M %p")
+          td = "@#{log.user[:name]}"
+          td = auto_link(log.text)
 
 = paginate @logs.to_kaminari.page(params[:page]).per(Log.default_per_page)
