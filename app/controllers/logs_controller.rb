@@ -7,7 +7,9 @@ class LogsController < ApplicationController
     redirect_to :root if params[:q] == ''
 
     queries = str_to_queries(params[:q])
-    @logs = Log.search_text(queries).skipped_by_page(params[:page]).decorate
+    result = Log.search_text(queries)
+    @number = result.count
+    @logs = result.skipped_by_page(params[:page]).decorate
   end
 
   private

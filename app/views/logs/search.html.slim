@@ -3,7 +3,7 @@
     .name
       = "'#{params[:q]}' の検索結果"
     .count
-      = "#{@logs.size} 件"
+      = "#{@number} 件"
 
 - @logs.group_by_room.each do |room, logs|
   h2 = "##{room}"
