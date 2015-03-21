@@ -1,5 +1,5 @@
 div class="page-header"
-  h1 = @room
+  h1 = "##{@room}"
 - @logs.group_by_date.each do |day, logs|
   h2 = day
   table.room class="table table-striped"
@@ -15,4 +15,4 @@ div class="page-header"
           td = "@#{log.user[:name]}"
           td = auto_link(simple_format(h(log.text)))
 
-= paginate @logs.to_kaminari.page(params[:page]).per(Log.default_per_page)
+= paginate @logs.to_kaminari.page(params[:page])

@@ -16,5 +16,7 @@ class Log
     Time.at(raw_message[:ts].to_i)
   end
 
-  scope :skipped_by_page, ->(page) { skip(default_per_page * (page.to_i - 1)).limit(Log.default_per_page) }
+  scope :select_room,     ->(room)    { where(room: room).order_by(id: 'desc') }
+  scope :search_text,     ->(queries) { all_in(text: queries).order_by(id: 'desc') }
+  scope :skipped_by_page, ->(page)    { skip(default_per_page * (page.to_i - 1)).limit(Log.default_per_page) }
 end

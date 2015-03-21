@@ -11,7 +11,7 @@ nav.nav-sidebar
         a.sidebar
           strong Search
     - for room in rooms
-      - if current_room?("##{room}")
+      - if current_room?(room)
         li.active
           a.sidebar href="/rooms/#{room}" ##{room}
       - else

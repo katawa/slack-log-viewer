@@ -4,10 +4,19 @@ class LogsController < ApplicationController
   end
 
   def search
-    return redirect_to :root if params[:q] == ''
-    queries = params.require(:q).split(/\p{White_Space}+/).compact.map {|q|
-      /.*#{Regexp.escape(q)}.*/i
-    }
-    @logs = LogsDecorator.new(Log.all_in(text: queries).skipped_by_page(params[:page]).order_by(id: 'desc'))
+    redirect_to :root if params[:q] == ''
+
+    queries = str_to_queries(params[:q])
+    @logs = Log.search_text(queries).skipped_by_page(params[:page]).decorate
+  end
+
+  private
+
+  def str_to_queries(str)
+    str.split(/\p{White_Space}+/).map { |q| query(q) }
+  end
+
+  def query(str)
+    /.*#{Regexp.escape(str)}.*/i
   end
 end
