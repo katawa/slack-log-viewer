@@ -18,6 +18,6 @@
         tr
           td.text-nowrap = log.datetime.strftime("%Y-%m-%d %I:%M %p")
           td = "@#{log.user[:name]}"
-          td = auto_link(log.text)
+          td = auto_link(simple_format(h(log.text)))
 
 = paginate @logs.to_kaminari.page(params[:page]).per(Log.default_per_page)
