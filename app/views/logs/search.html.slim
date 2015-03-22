@@ -6,7 +6,7 @@
       = "#{@number} 件"
 
 - @logs.group_by_room.each do |room, logs|
-  h2 = "##{room}"
+  h2 = link_to "##{room}", {controller: :rooms, action: :show, room: room}, {}
   table.room class="table table-striped"
     thead
       tr
