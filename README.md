@@ -33,3 +33,9 @@ $ git push heroku master
 
 ## Ref
 - [slack-logger](https://github.com/katawa/slack-logger)
+
+## Requires
+
+mongod = 2.6.8 (same as mongolab.com)
+
+
