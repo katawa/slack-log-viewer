@@ -14,7 +14,7 @@ module Logs
       parse.select{ |q| q.first == :text }.map { |q| /.*#{Regexp.escape(q.last)}.*/i }
     end
 
-    # @return [String]
+    # @return [String, nil]
     def user
       parse.select{ |q| q.first == :user }.first.andand.last
     end
