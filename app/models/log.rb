@@ -7,14 +7,11 @@ class Log
   field :room,        type: String
   field :text,        type: String
   field :user,        type: Hash
+  field :datetime,    type: Time
   alias_attribute :raw_message, :rawMessage
   alias_attribute :raw_text,    :rawText
 
   paginates_per 30
-
-  def datetime
-    Time.at(raw_message[:ts].to_i)
-  end
 
   default_scope -> { order_by(id: 'desc') }
 
