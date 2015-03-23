@@ -18,14 +18,14 @@ class Log
 
   default_scope -> { order_by(id: 'desc') }
 
-  scope :select_room,     ->(room)  { where(room: room) }
-  scope :search_user,     ->(user)  { where('user.name' => user) unless user.blank? }
+  scope :select_room,     ->(room)  { where(room: room) unless room.blank? }
+  scope :select_user,     ->(user)  { where('user.name' => user) unless user.blank? }
   scope :search_texts,    ->(texts) { all_in(text: texts) unless texts.empty? }
   scope :skipped_by_page, ->(page)  { skip(default_per_page * (page.to_i - 1)).limit(default_per_page) }
 
   # @param [Logs::Query] query
   # @return [Array<Log>]
   def self.search(query)
-    search_texts(query.texts).search_user(query.user)
+    search_texts(query.texts).select_user(query.user).select_room(query.room)
   end
 end

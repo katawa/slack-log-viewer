@@ -1,7 +1,7 @@
 module Logs
   class Query
     def self.types
-      [:text, :user]
+      [:text, :user, :room]
     end
 
     # @param [String] str
@@ -17,6 +17,11 @@ module Logs
     # @return [String, nil]
     def user
       parse.select{ |q| q.first == :user }.first.andand.last
+    end
+
+    # @return [String, nil]
+    def room
+      parse.select{ |q| q.first == :room }.first.andand.last
     end
 
     private
