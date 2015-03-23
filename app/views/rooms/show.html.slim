@@ -1,7 +1,7 @@
 div class="page-header"
   h1 = "##{@room}"
 - @logs.group_by_date.each do |day, logs|
-  h2 = day
+  h2 = link_to day, {controller: :logs, action: :search, q: "date:#{day}"}, {}
   table.room class="table table-striped"
     thead
       tr
