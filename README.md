@@ -6,7 +6,8 @@
 $ brew install mongodb
 $ git clone git@github.com:katawa/slack-log-viewer.git
 $ cd slack-log-viewer
-$ bundle install --path=vendor/bundle --binstubs
+$ bundle install --path=vendor/bundle
+$ bundle exec spring binstub --all
 ```
 
 ## Usage
