@@ -12,6 +12,7 @@ $ brew install mongodb
 ```
 
 ### Clone & Install
+
 ```
 $ git clone git@github.com:katawa/slack-log-viewer.git
 $ cd slack-log-viewer
