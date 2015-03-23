@@ -17,7 +17,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'draper'
 gem 'kaminari'
 gem 'rails_autolink'
-gem 'dotenv-rails'
 gem 'exception_notification'
 
 gem 'andand'
