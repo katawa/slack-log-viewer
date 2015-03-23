@@ -26,7 +26,7 @@
 ```bash
 git checkout -b feature/fix_search_icon
 vim app/view/search/show.slim
-git commit -a -m ''
+git commit -a -m 'use glyphicon for search icon'
 git push -u origin feature/fix_search_icon
 ```
 
