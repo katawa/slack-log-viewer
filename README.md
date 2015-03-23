@@ -26,7 +26,7 @@ $ export MONGO_HOST=***
 $ export MONGO_DB=***
 $ export MONGO_USER=***
 $ export MONGO_PASS=***
-$ bundle exec rails s
+$ bin/rails s
 ```
 
 ## Heroku
