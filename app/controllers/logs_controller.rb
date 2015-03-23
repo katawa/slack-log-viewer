@@ -1,6 +1,5 @@
 class LogsController < ApplicationController
   def index
-    @channels = Log.distinct(:room).sort
   end
 
   def search
