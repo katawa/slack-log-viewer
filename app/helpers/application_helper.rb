@@ -1,6 +1,5 @@
 module ApplicationHelper
   def search?
-    # binding.pry
     request.path_info =~ %r{/logs/search.*}
   end
 
