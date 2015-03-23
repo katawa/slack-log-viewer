@@ -12,6 +12,9 @@
 - `hotfix/*`
   - branch for critical bug which must be applied immediately to all branches
 
+### Ruby version
+- 2.2.0
+
 ### Ruby coding style
 
 - snake_case is preferred
