@@ -11,22 +11,22 @@ module Logs
 
     # @return [Array<String>]
     def texts
-      parse.select{ |q| q.first == :text }.map { |q| /.*#{Regexp.escape(q.last)}.*/i }
+      parse.select { |q| q.first == :text }.map { |q| /.*#{Regexp.escape(q.last)}.*/i }
     end
 
     # @return [String, nil]
     def user
-      parse.select{ |q| q.first == :user }.first.andand.last
+      parse_by_type(:user)
     end
 
     # @return [String, nil]
     def room
-      parse.select{ |q| q.first == :room }.first.andand.last
+      parse_by_type(:room)
     end
 
     # @return [Time, nil]
     def date
-      Time.parse(parse.select{ |q| q.first == :date }.first.andand.last)
+      Time.parse(parse_by_type(:date))
     rescue
       nil
     end
@@ -46,6 +46,12 @@ module Logs
     # @return [Symbol]
     def to_type(str)
       Query.types.select { |type| str.start_with?("#{type.to_s}:") }.first || :text
+    end
+
+    # @param [Symbol] type
+    # @return [String]
+    def parse_by_type(type)
+      parse.select { |q| q.first == type }.first.andand.last
     end
   end
 end
