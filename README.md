@@ -1,28 +1,35 @@
-== README
+# Slack Log Viewer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+```
+$ brew install mongodb
+$ git clone git@github.com:katawa/slack-log-viewer.git
+$ cd slack-log-viewer
+$ bundle install --path=vendor/bundle --binstubs
+```
 
-* Ruby version
+## Usage
 
-* System dependencies
+```
+$ export MONGO_HOST=***
+$ export MONGO_DB=***
+$ export MONGO_USER=***
+$ export MONGO_PASS=***
+$ bin/rails s
+```
 
-* Configuration
+## Heroku
 
-* Database creation
+```
+$ heroku config:set MONGO_HOST=***
+$ heroku config:set MONGO_DB=***
+$ heroku config:set MONGO_USER=***
+$ heroku config:set MONGO_PASS=***
+$ heroku config:set BASIC_AUTH_USERNAME=***
+$ heroku config:set BASIC_AUTH_PASSWORD=***
+$ git push heroku master
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Ref
+- [slack-logger](https://github.com/katawa/slack-logger)
