@@ -33,7 +33,7 @@ git push -u origin feature/fix_search_icon
 ### 2. Pull request
 
 - Open https://github.com/katawa/slack-log-viewer and press the pull request button
-- You can self-merge & deploy when you've received >1 review comments
+- You can self-merge & deploy when you've received >=1 review comment(s)
 - That's all!
 
 
