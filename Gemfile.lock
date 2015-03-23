@@ -88,9 +88,6 @@ GEM
     daemons (1.2.2)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
-    dotenv (2.0.0)
-    dotenv-rails (2.0.0)
-      dotenv (= 2.0.0)
     draper (1.4.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -338,7 +335,6 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   compass-rails
-  dotenv-rails
   draper
   exception_notification
   factory_girl_rails
