@@ -22,4 +22,10 @@ class Log
   scope :search_user,     ->(user)  { where('user.name' => user) unless user.blank? }
   scope :search_texts,    ->(texts) { all_in(text: texts) unless texts.empty? }
   scope :skipped_by_page, ->(page)  { skip(default_per_page * (page.to_i - 1)).limit(default_per_page) }
+
+  # @param [Logs::Query] query
+  # @return [Array<Log>]
+  def self.search(query)
+    search_texts(query.texts).search_user(query.user)
+  end
 end
