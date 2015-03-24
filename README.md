@@ -1,5 +1,27 @@
 # Slack Log Viewer
 
+## Development
+
+```
+$ export MONGO_HOST=***
+$ export MONGO_DB=***
+$ export MONGO_USER=***
+$ export MONGO_PASS=***
+$ npm install
+$ bower install
+```
+
+In another window
+```
+$ npm run start
+```
+
+In another window
+
+```
+$ bin/rails s
+```
+
 ## Install
 
 ### Install MongoDB 2.6.8 on OSX
@@ -20,16 +42,6 @@ $ bundle install --path=vendor/bundle
 $ bundle exec spring binstub --all
 ```
 
-## Usage
-
-```
-$ export MONGO_HOST=***
-$ export MONGO_DB=***
-$ export MONGO_USER=***
-$ export MONGO_PASS=***
-$ bin/rails s
-```
-
 ## Heroku
 
 ```
@@ -42,11 +54,10 @@ $ heroku config:set BASIC_AUTH_PASSWORD=***
 $ git push heroku master
 ```
 
-## Ref
+## References
 - [slack-logger](https://github.com/katawa/slack-logger)
 
-## Requires
+## Requirements
 
-mongod = 2.6.8 (same as mongolab.com)
-
+- mongod = 2.6.8 (same as mongolab.com)
 
