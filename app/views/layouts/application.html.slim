@@ -1,11 +1,15 @@
 doctype html
 html
   head
-    title
-      | SlackLogViewer
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+
+    title Slack Log Viewer
+
     = csrf_meta_tags
+    = webpack_entry_tag "index.js"
+
   body.slacklog
     = render partial: '/layouts/navbar'
 

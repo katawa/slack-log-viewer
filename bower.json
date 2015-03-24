@@ -1,0 +1,39 @@
+{
+  "name": "slack-log-viewer",
+  "version": "1.0.0",
+  "homepage": "https://github.com/katawa/slack-log-viewer",
+  "authors": [
+    "saki7 <n.sakisaka@gmail.com>"
+  ],
+  "description": "Slack Log Viewer",
+  "main": "app/assets/index.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "katawa",
+    "slack",
+    "hubot",
+    "log",
+    "mongo",
+    "mongodb",
+    "webpack",
+    "rails"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.5.0",
+    "underscore.string": "~3.0.3",
+    "jquery-ujs": "~1.0.3",
+    "jquery": "~2.1.3"
+  }
+}
