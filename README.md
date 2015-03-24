@@ -7,6 +7,7 @@ $ export MONGO_HOST=***
 $ export MONGO_DB=***
 $ export MONGO_USER=***
 $ export MONGO_PASS=***
+$ bundle
 $ npm install
 $ bower install
 ```
@@ -22,9 +23,9 @@ In another window
 $ bin/rails s
 ```
 
-## Install
+## Initial Installation
 
-### Install MongoDB 2.6.8 on OSX
+### Install MongoDB (OSX)
 
 ```
 $ brew tap homebrew/boneyard
@@ -33,7 +34,7 @@ $ git checkout 4ea480f /usr/local/Library/Formula/mongodb.rb # using mongodb 2.6
 $ brew install mongodb
 ```
 
-### Clone & Install
+### Clone & Bundle Install
 
 ```
 $ git clone git@github.com:katawa/slack-log-viewer.git
@@ -42,7 +43,7 @@ $ bundle install --path=vendor/bundle
 $ bundle exec spring binstub --all
 ```
 
-## Heroku
+## Heroku Deployment
 
 ```
 $ heroku config:set MONGO_HOST=***
