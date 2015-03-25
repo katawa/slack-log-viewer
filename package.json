@@ -30,7 +30,8 @@
     "test": "bin/rspec",
     "start": "gulp",
     "build": "gulp build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "postinstall": "bower install && gulp build"
   },
   "repository": {
     "type": "git",

@@ -52,6 +52,7 @@ $ heroku config:set MONGO_USER=***
 $ heroku config:set MONGO_PASS=***
 $ heroku config:set BASIC_AUTH_USERNAME=***
 $ heroku config:set BASIC_AUTH_PASSWORD=***
+$ heroku config:set BUILDPACK_URL='git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower'
 $ git push heroku master
 ```
 
