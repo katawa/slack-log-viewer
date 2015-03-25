@@ -5,7 +5,11 @@
 !/log/.keep
 /tmp
 /.envrc
+
 /public/assets
+/node_modules
+/bower_components
+npm-debug.log
 
 /.idea/*
 !/.idea/codeStyleSettings.xml

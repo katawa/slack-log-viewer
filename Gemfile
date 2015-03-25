@@ -1,16 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
 
-gem 'rails', '4.2.0'
-gem 'mongoid', '~> 4.0.0'
+gem 'rails', '~> 4.2'
+gem 'mongoid', '~> 4.0'
 gem 'slim-rails'
-gem 'twitter-bootstrap-rails'
-gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
-gem 'compass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 
 gem 'turbolinks'
@@ -42,6 +38,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pre-commit'
+
+  gem 'foreman'
 end
 
 group :test do

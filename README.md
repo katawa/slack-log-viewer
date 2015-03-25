@@ -1,8 +1,31 @@
 # Slack Log Viewer
 
-## Install
+## Development
 
-### Install MongoDB 2.6.8 on OSX
+```
+$ export MONGO_HOST=***
+$ export MONGO_DB=***
+$ export MONGO_USER=***
+$ export MONGO_PASS=***
+$ bundle
+$ npm install
+$ bower install
+```
+
+In another window
+```
+$ npm run start
+```
+
+In another window
+
+```
+$ bin/rails s
+```
+
+## Initial Installation
+
+### Install MongoDB (OSX)
 
 ```
 $ brew tap homebrew/boneyard
@@ -11,7 +34,7 @@ $ git checkout 4ea480f /usr/local/Library/Formula/mongodb.rb # using mongodb 2.6
 $ brew install mongodb
 ```
 
-### Clone & Install
+### Clone & Bundle Install
 
 ```
 $ git clone git@github.com:katawa/slack-log-viewer.git
@@ -20,17 +43,7 @@ $ bundle install --path=vendor/bundle
 $ bundle exec spring binstub --all
 ```
 
-## Usage
-
-```
-$ export MONGO_HOST=***
-$ export MONGO_DB=***
-$ export MONGO_USER=***
-$ export MONGO_PASS=***
-$ bin/rails s
-```
-
-## Heroku
+## Heroku Deployment
 
 ```
 $ heroku config:set MONGO_HOST=***
@@ -39,14 +52,14 @@ $ heroku config:set MONGO_USER=***
 $ heroku config:set MONGO_PASS=***
 $ heroku config:set BASIC_AUTH_USERNAME=***
 $ heroku config:set BASIC_AUTH_PASSWORD=***
+$ heroku config:set BUILDPACK_URL='git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower'
 $ git push heroku master
 ```
 
-## Ref
+## References
 - [slack-logger](https://github.com/katawa/slack-logger)
 
-## Requires
+## Requirements
 
-mongod = 2.6.8 (same as mongolab.com)
-
+- mongod = 2.6.8 (same as mongolab.com)
 

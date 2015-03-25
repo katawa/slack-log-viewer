@@ -10,4 +10,9 @@ module ApplicationHelper
   def rooms
     Log.distinct(:room).sort.map
   end
+
+  # assets
+  def webpack_entry_tag(entry)
+    javascript_include_tag(AssetManifest.webpack_entry_path(entry))
+  end
 end

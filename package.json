@@ -1,0 +1,56 @@
+{
+  "name": "slack-log-viewer",
+  "version": "1.0.0",
+  "description": "Slack Log Viewer",
+  "main": "app/assets/index.js",
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.9.1",
+    "compass-mixins": "^0.12.3",
+    "css-loader": "^0.9.1",
+    "file-loader": "^0.8.1",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "jsx-loader": "^0.12.2",
+    "loader-utils": "^0.2.6",
+    "moment": "^2.9.0",
+    "node-sass": "3.0.0-pre",
+    "raw-loader": "^0.5.1",
+    "react": "^0.13.1",
+    "react-jade": "^2.4.0",
+    "reflux": "^0.2.7",
+    "sass-graph": "https://github.com/saki7/sass-graph/archive/master.tar.gz",
+    "sass-loader": "^0.5.0",
+    "style-loader": "^0.9.0",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.7.3",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "scripts": {
+    "test": "bin/rspec",
+    "start": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "postinstall": "bower install && gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katawa/slack-log-viewer.git"
+  },
+  "keywords": [
+    "katawa",
+    "slack",
+    "hubot",
+    "log",
+    "mongo",
+    "mongodb",
+    "webpack",
+    "rails"
+  ],
+  "author": "katawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katawa/slack-log-viewer/issues"
+  },
+  "homepage": "https://github.com/katawa/slack-log-viewer"
+}
