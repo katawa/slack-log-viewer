@@ -1,5 +1,16 @@
 # Slack Log Viewer
 
+## Dependency Software Install
+
+### Install MongoDB (OSX)
+
+```
+$ brew tap homebrew/boneyard
+$ cd /usr/local
+$ git checkout 4ea480f /usr/local/Library/Formula/mongodb.rb # using mongodb 2.6.8
+$ brew install mongodb
+```
+
 ## Development
 
 ```
@@ -11,6 +22,13 @@ $ bundle
 $ npm install
 $ bower install
 ```
+### Start
+
+```
+$ bundle exec foreman start -f Procfile.dev
+```
+
+or
 
 In another window
 ```
@@ -21,26 +39,6 @@ In another window
 
 ```
 $ bin/rails s
-```
-
-## Initial Installation
-
-### Install MongoDB (OSX)
-
-```
-$ brew tap homebrew/boneyard
-$ cd /usr/local
-$ git checkout 4ea480f /usr/local/Library/Formula/mongodb.rb # using mongodb 2.6.8
-$ brew install mongodb
-```
-
-### Clone & Bundle Install
-
-```
-$ git clone git@github.com:katawa/slack-log-viewer.git
-$ cd slack-log-viewer
-$ bundle install --path=vendor/bundle
-$ bundle exec spring binstub --all
 ```
 
 ## Heroku Deployment
@@ -62,4 +60,3 @@ $ git push heroku master
 ## Requirements
 
 - mongod = 2.6.8 (same as mongolab.com)
-
