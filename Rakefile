@@ -4,3 +4,9 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+Rake.application.instance_variable_get('@tasks').delete('assets:precompile')
+namespace :assets do
+  desc 'disable assets:precompile'
+  task :precompile do
+  end
+end
