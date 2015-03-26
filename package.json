@@ -31,7 +31,6 @@
     "test": "bin/rspec",
     "start": "gulp",
     "build": "gulp build",
-    "bower": "bower install",
     "clean": "gulp clean",
     "postinstall": "bower install && gulp build"
   },
