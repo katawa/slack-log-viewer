@@ -13,7 +13,7 @@ class Log
 
   paginates_per 30
 
-  default_scope -> { order_by(id: 'desc') }
+  default_scope -> { order_by(datetime: 'desc') }
 
   scope :select_room,     ->(room)  { where(room: room) unless room.blank? }
   scope :select_user,     ->(user)  { where('user.name' => user) unless user.blank? }
