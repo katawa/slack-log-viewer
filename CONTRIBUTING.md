@@ -13,7 +13,7 @@
   - branch for critical bug which must be applied immediately to all branches
 
 ### Ruby version
-- 2.2.0
+- 2.2.1
 
 ### Ruby coding style
 
