@@ -20,6 +20,9 @@ gem 'andand'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'sanitize'
+gem 'slack_message_markdown', github: 'tigberd/slack_message_markdown'
+
 group :development, :test do
   gem 'thin'
   gem 'spring'

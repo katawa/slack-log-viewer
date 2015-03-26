@@ -31,5 +31,7 @@ module SlackLogViewer
       g.assets false
       g.template_engine :slim
     end
+
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
