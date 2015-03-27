@@ -3,7 +3,7 @@ class LogsController < ApplicationController
   end
 
   def search
-    redirect_to :root and return if params[:q] == ''
+    redirect_to :root && return if params[:q] == ''
 
     result = Log.search(Logs::Query.new(params[:q]))
     @number = result.count

@@ -37,7 +37,7 @@ module Logs
     def parse
       @str.split(/\p{White_Space}+/).map do |q|
         type = to_type(q)
-        value = q.split("#{type.to_s}:").last
+        value = q.split("#{type}:").last
         [type, value]
       end
     end
@@ -45,13 +45,13 @@ module Logs
     # @param [String] str
     # @return [Symbol]
     def to_type(str)
-      Query.types.select { |type| str.start_with?("#{type.to_s}:") }.first || :text
+      Query.types.find { |type| str.start_with?("#{type}:") } || :text
     end
 
     # @param [Symbol] type
     # @return [String]
     def parse_by_type(type)
-      parse.select { |q| q.first == type }.first.andand.last
+      parse.find { |q| q.first == type }.andand.last
     end
   end
 end

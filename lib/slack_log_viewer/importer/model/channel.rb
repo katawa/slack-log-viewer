@@ -6,13 +6,22 @@ module SlackLogViewer
 
         # @param [Hash] channel
         def initialize(channel)
-            self.id = channel['id']
-            self.name = channel['name']
+          self.id = channel['id']
+          self.name = channel['name']
+        end
+
+        def to_hash
+          {
+            id: id,
+            name: name
+          }
         end
 
         class << self
-          def load(log_dir)
-            JSON.load(open("#{log_dir}/channels.json")).map { |hash| Channel.new(hash) }
+          # @param [String] file
+          # @return [Array<Channel>]
+          def load(file)
+            JSON.load(open(file)).map { |hash| Channel.new(hash) }
           end
         end
       end

@@ -12,9 +12,20 @@ module SlackLogViewer
           self.mail = user['profile']['email']
         end
 
+        def to_hash
+          {
+            id: id,
+            name: name,
+            real_name: real_name,
+            mail: mail
+          }
+        end
+
         class << self
-          def load(log_dir)
-            JSON.load(open("#{log_dir}/users.json")).map { |hash| User.new(hash) }
+          # @param [String] file
+          # @return [Array<User>]
+          def load(file)
+            JSON.load(open(file)).map { |hash| User.new(hash) }
           end
         end
       end

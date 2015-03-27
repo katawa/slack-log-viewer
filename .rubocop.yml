@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+
+# ファイル冒頭にコメント不要
+Style/Documentation:
+  Enabled: false
+
+# 1行を120文字まで許可
+LineLength:
+  Max: 120
+
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+# モジュール名::クラス名の定義を許可
+ClassAndModuleChildren:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
