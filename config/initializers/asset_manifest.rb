@@ -3,7 +3,6 @@ class AssetManifest
     webpackify_url(url)
   end
 
-  protected
   class << self
     if Rails.env.production?
       define_method :webpackify_url do |url|
@@ -16,4 +15,3 @@ class AssetManifest
     end
   end
 end
-
