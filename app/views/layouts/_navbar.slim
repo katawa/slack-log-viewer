@@ -2,7 +2,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
   div.container-fluid
     div.navbar-header
       a.navbar-brand href="/" Slack Log Viewer
-    div#navbar.navbar-collapse.collapse
+    div#navbar.navbar-collapse
       ul#navbar-list-menu.nav.navbar-nav.navbar-right
         = form_tag({controller: :logs, action: :search}, {method: :get, id: 'search', class: 'form-inline'}) do
           .input-group
