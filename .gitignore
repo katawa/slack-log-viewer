@@ -5,6 +5,7 @@
 !/log/.keep
 /tmp
 /.envrc
+/.nvmrc
 
 /public/assets
 /node_modules
